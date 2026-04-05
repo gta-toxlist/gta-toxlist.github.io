@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTA Toxlist | Problematic Player Index</title>
+    <link rel="icon" type="image/x-icon" href="/Text.png">
+    <link href="./style.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            bg: '#121212',
+                            card: '#1e1e1e',
+                            text: '#e0e0e0'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 dark:bg-dark-bg text-gray-900 dark:text-dark-text min-h-screen font-sans">
+    <header class="sticky top-0 z-50 bg-white/80 dark:bg-dark-bg/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <img src="Text.png" alt="GTA Toxlist Logo" class="w-55 h-10 rounded-lg shadow-lg heigh">
+                <h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">GTA Toxlist</h1>
+            </div>
+            <div class="flex items-center space-x-6">
+                <a href="#reports" class="hover:text-red-500 transition-colors font-medium">Reports</a>
+                <a href="#submit" class="hover:text-red-500 transition-colors font-medium">Submit</a>
+                <button id="theme-toggle" class="p-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                    <span id="theme-icon">🌙</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 py-12">
+        <!-- Hero Section -->
+        <section class="mb-20 text-center max-w-3xl mx-auto">
+            <h2 class="text-5xl font-extrabold mb-6 leading-tight text-gray-900 dark:text-white">Transparent index of problematic players</h2>
+            <p class="text-xl text-gray-600 dark:text-gray-400 mb-8">
+                GTA Toxlist indexes incidents of toxicity, modding, and griefing in GTA 5 Online to make the community safer and more transparent.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8 text-sm">
+                <div class="flex items-center space-x-2">
+                    <img src="Text.png" alt="Own Experience" class="w-50 h-6 rounded">
+                    <span>My experiences</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <img src="verified.png" alt="Community Report" class="w-6 h-6 rounded">
+                    <span>Community submissions</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rules / Disclaimer -->
+        <section class="mb-16 p-6 bg-red-50 dark:bg-red-900/10 border border-red-100 dark:border-red-900/30 rounded-2xl">
+            <h3 class="text-lg font-bold text-red-600 dark:text-red-400 mb-2 uppercase tracking-wider">Important Notice</h3>
+            <p class="text-gray-700 dark:text-gray-300">
+                This list is for documenting in-game behavior. <strong>No doxxing, no harassment, and no sharing of private data.</strong> All community reports must include proof (screenshots, videos, etc.).
+            </p>
+        </section>
+
+        <!-- Reports Sections -->
+        <section id="reports" class="space-y-24">
+            <!-- Toxic Players -->
+            <div>
+                <div class="flex items-center justify-between mb-8">
+                    <h3 class="text-3xl font-bold text-gray-900 dark:text-white">Toxic Players</h3>
+                    <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-400 text-xs font-bold rounded-full uppercase">Category: Toxic</span>
+                </div>
+                <div id="toxic-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="animate-pulse bg-gray-200 dark:bg-gray-800 h-48 rounded-2xl"></div>
+                </div>
+            </div>
+
+            <!-- Modding -->
+            <div>
+                <div class="flex items-center justify-between mb-8">
+                    <h3 class="text-3xl font-bold text-gray-900 dark:text-white">Modding / Modded Accounts</h3>
+                    <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 text-xs font-bold rounded-full uppercase">Category: Modding</span>
+                </div>
+                <div id="modding-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="animate-pulse bg-gray-200 dark:bg-gray-800 h-48 rounded-2xl"></div>
+                </div>
+            </div>
+
+            <!-- Griefing -->
+            <div>
+                <div class="flex items-center justify-between mb-8">
+                    <h3 class="text-3xl font-bold text-gray-900 dark:text-white">Griefing Players</h3>
+                    <span class="px-3 py-1 bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 text-xs font-bold rounded-full uppercase">Category: Griefing</span>
+                </div>
+                <div id="griefing-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="animate-pulse bg-gray-200 dark:bg-gray-800 h-48 rounded-2xl"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Submission Form -->
+        <section id="submit" class="mt-32 max-w-2xl mx-auto">
+            <div class="text-center mb-12">
+                <h3 class="text-4xl font-bold mb-4 text-gray-900 dark:text-white">Submit a new report</h3>
+                <p class="text-gray-600 dark:text-gray-400">Share your experience with the community. Reports without proof will not be accepted.</p>
+            </div>
+
+            <form action="https://formspree.io/f/mykblzyd" method="POST" class="space-y-6 bg-white dark:bg-dark-card p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-800">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium mb-2">In-Game Name</label>
+                        <input type="text" name="player_name" required class="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 focus:ring-2 focus:ring-red-500 outline-none transition-all text-gray-900 dark:text-white">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Platform</label>
+                        <select name="platform" class="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 focus:ring-2 focus:ring-red-500 outline-none transition-all text-gray-900 dark:text-white">
+                            <option value="PC">PC</option>
+                            <option value="PS5">PS5</option>
+                            <option value="PS4">PS4</option>
+                            <option value="Xbox">Xbox Series X/S</option>
+                            <option value="Xbox One">Xbox One</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium mb-2">Category</label>
+                    <select name="category" class="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 focus:ring-2 focus:ring-red-500 outline-none transition-all text-gray-900 dark:text-white">
+                        <option value="toxic">Toxic</option>
+                        <option value="modding">Modding</option>
+                        <option value="griefing">Griefing</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium mb-2">Description of the incident</label>
+                    <textarea name="description" rows="4" required class="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 focus:ring-2 focus:ring-red-500 outline-none transition-all text-gray-900 dark:text-white" placeholder="What happened?"></textarea>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium mb-2">Proof Link (Screenshot/Video) Videos <strong>must</strong> be uploaded to YouTube</label>
+                    <input type="url" name="evidence" required class="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 focus:ring-2 focus:ring-red-500 outline-none transition-all text-gray-900 dark:text-white" placeholder="https://...">
+                </div>
+
+                <button type="submit" class="w-full py-4 bg-red-600 hover:bg-red-700 text-white font-bold rounded-xl transition-colors shadow-lg shadow-red-600/20">
+                    Submit report
+                </button>
+                <p class="text-center text-xs text-gray-500 mt-4">Note: Reports will be manually reviewed before publication.</p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="mt-32 py-12 border-t border-gray-200 dark:border-gray-800 text-center text-gray-500 text-sm">
+        <p>&copy; 2026 GTA Toxlist. Not an official or affiliated Rockstar Games website.</p>
+    </footer>
+
+    <script src="./app.js"></script>
+</body>
+</html>

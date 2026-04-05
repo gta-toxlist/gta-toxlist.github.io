@@ -1,0 +1,23 @@
+[
+  {
+    "name": "I-UFO-I ",
+    "platform": "PC",
+    "description": "Repeatedly killed me so much, that i couldn't spawn in.",
+    "reportType": "my-own",
+    "context": "Repeated Killing"
+  },
+  {
+    "name": "SpeedIHack",
+    "platform": "PC",
+    "description": "Using an Oppressor Mk II to kill low level players (25-50) while he's level 300.",
+    "reportType": "my-own",
+    "context": "Public lobby"
+  },
+  {
+    "name": "ydstatzz",
+    "platform": "PC",
+    "description": "I Accidentally killed him while we were both fighting the same guy.I blew him up by accident and immediately said sorry, and he went on his Oppressor Mk II and chased me around the map, trying to kill me.",
+    "reportType": "my-own",
+    "context": "Public lobby"
+  }
+]
