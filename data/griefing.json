@@ -19,5 +19,12 @@
     "description": "I Accidentally killed him while we were both fighting the same guy.I blew him up by accident and immediately said sorry, and he went on his Oppressor Mk II and chased me around the map, trying to kill me.",
     "reportType": "my-own",
     "context": "Public lobby"
+  },
+  {
+    "name": "Sam ivett",
+    "platform": "Xbox",
+    "description": "I was doing prep work for an autoshop when this person just kills me failing the job. After i reapawn, they ended up killing me again. I managed to defend myself one time, but that is where my skill fails me."
+    "reportType": "verified",
+    "context": "Public Lobby"
   }
 ]
