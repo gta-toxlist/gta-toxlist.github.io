@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', ( ) => {
                         </div>
                     </div>
                     <span class="px-2 py-1 bg-gray-100 dark:bg-gray-800 text-[10px] font-bold rounded uppercase text-gray-600 dark:text-gray-400">
-                        ${isOwnReport ? 'Offical' : 'Community'}
+                        ${isOwnReport ? 'Official' : 'Community'}
                     </span>
                 </div>
                 <p class="text-gray-700 dark:text-gray-300 text-sm mb-4 leading-relaxed">
